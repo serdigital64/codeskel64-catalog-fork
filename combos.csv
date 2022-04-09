@@ -20,5 +20,5 @@ git-terraform-module:MarkDown:project-generic-changelog
 git-shellscript:GIT:generic
 git-shellscript:Licenses:git-coc
 git-shellscript:Licenses:gnu-v3
-git-shellscript:MarkDown:shellscript-generic
+git-shellscript:MarkDown:shellscript-generic-v2
 git-shellscript:MarkDown:project-generic-changelog
