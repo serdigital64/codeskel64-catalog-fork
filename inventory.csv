@@ -1,4 +1,4 @@
-# last update: 24-MARCH-2022
+# last update: 9-APR-2022
 # collection:skeleton:type:source
 Ansible:collection-aplatform64:d:collection-aplatform64
 Ansible:collection-generic:d:collection-generic
@@ -16,9 +16,12 @@ GIT:terraform-module:d:terraform-provider-module
 Licenses:apache-v2:f:LICENSE
 Licenses:git-coc:f:CODE_OF_CONDUCT.md
 Licenses:gnu-v3:f:COPYING
-MarkDown:project-generic-readme:f:README.md
+MarkDown:project-generic-readme-v1:f:README.md
+MarkDown:project-generic-readme-v2:f:README.md
 MarkDown:project-generic-changelog:f:CHANGELOG.md
-MarkDown:bash-generic:f:README.md
+MarkDown:project-generic-contributing:f:CONTRIBUTING.md
+MarkDown:shellscript-generic-v1:f:README.md
+MarkDown:shellscript-generic-v2:f:README.md
 MarkDown:terraform-module:f:README.md
 MarkDown:terraform-terra4aws64:f:README.md
 MarkDown:ansible-collection-generic:f:README.md
@@ -34,3 +37,4 @@ VSCode:configuration-full:d:.vscode
 Combo:aplatform64-role:b:aplatform64-role
 Combo:git-generic:b:git-generic
 Combo:git-terraform-module:b:terraform-provider-module
+Combo:git-shellscript:b:git-shellscript

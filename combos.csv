@@ -1,4 +1,4 @@
-# last update: 24-MARCH-2022
+# last update: 9-APR-2022
 # combo:collection:skeleton
 aplatform64-role:Ansible:molecule-aplatform64
 aplatform64-role:Ansible:role-aplatform64-full
@@ -8,11 +8,17 @@ aplatform64-role:MarkDown:ansible-role-aplatform64
 git-generic:GIT:generic
 git-generic:Licenses:git-coc
 git-generic:Licenses:gnu-v3
-git-generic:MarkDown:project-generic-readme
+git-generic:MarkDown:project-generic-readme-v2
 git-generic:MarkDown:project-generic-changelog
+git-generic:MarkDown:project-generic-contributing
 git-terraform-module:GIT:terraform-module
 git-terraform-module:Terraform:module-generic
 git-terraform-module:Licenses:git-coc
 git-terraform-module:Licenses:gnu-v3
 git-terraform-module:MarkDown:project-terraform-module
 git-terraform-module:MarkDown:project-generic-changelog
+git-shellscript:GIT:generic
+git-shellscript:Licenses:git-coc
+git-shellscript:Licenses:gnu-v3
+git-shellscript:MarkDown:shellscript-generic
+git-shellscript:MarkDown:project-generic-changelog
