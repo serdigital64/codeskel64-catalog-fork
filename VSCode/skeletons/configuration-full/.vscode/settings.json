@@ -1,5 +1,5 @@
 //
-// Settings Template Version: 040422
+// Settings Template Version: 100422
 // VSCode Version: >= 1.66
 //
 // Static settings section. Use to keep read-only settings that will only be modified when updating from the master template.
@@ -8,6 +8,7 @@
   "aws.telemetry": false,
   "azureTerraform.checkTerraformCmd": false,
   "azureTerraform.files": "**/*.{rb,sh,tf,tfvars}",
+  "azureTerraform.terminal": "integrated",
   "breadcrumbs.enabled": true,
   "code-runner.clearPreviousOutput": true,
   "code-runner.enableAppInsights": false,
@@ -153,11 +154,13 @@
   "[terraform]": {
     "editor.defaultFormatter": "hashicorp.terraform",
     "editor.formatOnSave": true,
+    "editor.tabSize": 2,
     "editor.formatOnSaveMode": "file"
   },
   "[terraform-vars]": {
     "editor.defaultFormatter": "hashicorp.terraform",
     "editor.formatOnSave": true,
+    "editor.tabSize": 2,
     "editor.formatOnSaveMode": "file"
   },
   "[ansible]": {
@@ -193,6 +196,57 @@
     "statusBar": "darken",
     "titleBar": "lighten"
   },
+  "peacock.darkForegroundColor": "",
+  "peacock.lightForegroundColor": "",
+  "terminal.integrated.profiles.linux": {
+    "bash": {
+      "path": "bash",
+      "icon": "terminal-bash"
+    },
+    "zsh": {
+      "path": "zsh"
+    },
+    "python3": {
+      "path": "python3",
+      "args": ["-i"]
+    }
+  },
+  "html-css-class-completion.HTMLLanguages": [
+    "html",
+    "vue",
+    "razor",
+    "blade",
+    "handlebars",
+    "twig",
+    "django-html",
+    "php",
+    "markdown",
+    "erb",
+    "ejs",
+    "svelte"
+  ],
+  "html-css-class-completion.JavaScriptLanguages": [
+    "javascript",
+    "javascriptreact",
+    "typescriptreact"
+  ],
+  "files.associations": {
+    "*.tsv": "tsv",
+    "*.toml": "toml",
+    "*.bash": "shellscript",
+    "*.sh": "shellscript",
+    "*.ini.j2": "jinja-toml",
+    "*.toml.j2": "jinja-toml",
+    "*.yml.j2": "jinja-yaml",
+    "*.sh.j2": "jinja-shell",
+    "*.json.j2": "jinja-json",
+    "*.service.j2": "jinja-systemd",
+    "*.yml": "ansible",
+    "*.html": "html"
+  },
+  //
+  // Local defaults section. Use to isolate settings that should not be replaced when updating from the master template
+  //
   "peacock.favoriteColors": [
     {
       "name": "Angular Red",
@@ -231,35 +285,6 @@
       "value": "#42b883"
     }
   ],
-  "peacock.darkForegroundColor": "",
-  "peacock.lightForegroundColor": "",
-  "terminal.integrated.profiles.linux": {
-    "bash": {
-      "path": "bash",
-      "icon": "terminal-bash"
-    },
-    "zsh": {
-      "path": "zsh"
-    },
-    "python3": {
-      "path": "python3",
-      "args": ["-i"]
-    }
-  },
-  "html-css-class-completion.HTMLLanguages": [
-    "html",
-    "vue",
-    "razor",
-    "blade",
-    "handlebars",
-    "twig",
-    "django-html",
-    "php",
-    "markdown",
-    "erb",
-    "ejs",
-    "svelte"
-  ],
   "yaml.customTags": [
     "!And",
     "!And sequence",
@@ -289,28 +314,13 @@
     "!Split",
     "!Split sequence"
   ],
-  "html-css-class-completion.JavaScriptLanguages": [
-    "javascript",
-    "javascriptreact",
-    "typescriptreact"
-  ],
-  "files.associations": {
-    "*.tsv": "tsv",
-    "*.toml": "toml",
-    "*.bash": "shellscript",
-    "*.sh": "shellscript",
-    "*.ini.j2": "jinja-toml",
-    "*.toml.j2": "jinja-toml",
-    "*.yml.j2": "jinja-yaml",
-    "*.sh.j2": "jinja-shell",
-    "*.json.j2": "jinja-json",
-    "*.service.j2": "jinja-systemd",
-    "*.yml": "ansible",
-    "*.html": "html"
+  "terraform.languageServer": {
+    "external": true,
+    "pathToBinary": "",
+    "args": ["serve"],
+    "maxNumberOfProblems": 100,
+    "trace.server": "off"
   },
-  //
-  // Local defaults section. Use to isolate settings that should not be replaced when updating from the master template
-  //
   "editor.fontFamily": "'MesloLGS NF'",
   "editor.inlayHints.fontFamily": "'MesloLGS NF'",
   "workbench.colorTheme": "Winter is Coming (Dark Blue - No Italics)",

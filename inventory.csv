@@ -33,7 +33,8 @@ MkDocs:configuration-material:d:configuration-material
 MkDocs:configuration-readthedocs:d:configuration-readthedocs
 Python:modules-ansible:d:modules-ansible
 Terraform:module-generic:d:module-generic
-VSCode:configuration-full:d:.vscode
+VSCode:configuration-full:d:vscode-setup
+VSCode:extensions-full:d:vscode-setup
 Combo:aplatform64-role:b:aplatform64-role
 Combo:git-generic:b:git-generic
 Combo:git-terraform-module:b:terraform-provider-module
