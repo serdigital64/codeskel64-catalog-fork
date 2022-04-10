@@ -23,7 +23,7 @@ MarkDown:project-generic-contributing:f:CONTRIBUTING.md
 MarkDown:shellscript-generic-v1:f:README.md
 MarkDown:shellscript-generic-v2:f:README.md
 MarkDown:terraform-module:f:README.md
-MarkDown:terraform-terra4aws64:f:README.md
+MarkDown:terraform-terra4cloud64:f:README.md
 MarkDown:ansible-collection-generic:f:README.md
 MarkDown:ansible-role-generic:f:README.md
 MarkDown:ansible-collection-aplatform64:f:README.md
@@ -37,4 +37,5 @@ VSCode:configuration-full:d:.vscode
 Combo:aplatform64-role:b:aplatform64-role
 Combo:git-generic:b:git-generic
 Combo:git-terraform-module:b:terraform-provider-module
+Combo:git-terraform-terra4cloud64:b:terraform-provider-terra4cloud64
 Combo:git-shellscript:b:git-shellscript

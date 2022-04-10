@@ -18,8 +18,6 @@ X_APP_DESCRIPTION_X
 
 ## Deployment
 
-### Compatibility
-
 ### Requirements
 
 ### Installation
@@ -28,8 +26,8 @@ X_APP_DESCRIPTION_X
 
 Help on implementing new features and maintaining the code base is welcomed.
 
-[Guidelines](X_PROJECT_CONTRIBUTING_URL_X)
-[Contributor Covenant Code of Conduct](X_PROJECT_GUILDELINES_URL_X)
+- [Guidelines](X_PROJECT_CONTRIBUTING_URL_X)
+- [Contributor Covenant Code of Conduct](X_PROJECT_GUILDELINES_URL_X)
 
 ### License
 
