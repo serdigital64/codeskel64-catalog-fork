@@ -52,11 +52,13 @@ X_ROLE_NAME_X_profiles:
 # Define custom package repositories
 X_ROLE_NAME_X_repository_custom_yum: []
 X_ROLE_NAME_X_repository_custom_apt: []
+X_ROLE_NAME_X_repository_custom_brew: "{{ X_ROLE_NAME_X_repository_custom_brew_common }}"
 
 # Set package repositories states
 X_ROLE_NAME_X_repository_catalog_distro: {}
 X_ROLE_NAME_X_repository_catalog_yum: {}
 X_ROLE_NAME_X_repository_catalog_apt: {}
+X_ROLE_NAME_X_repository_catalog_brew: "{{ X_ROLE_NAME_X_repository_catalog_brew_common }}"
 
 # Define OS subsystem states
 X_ROLE_NAME_X_subsystem_profile:

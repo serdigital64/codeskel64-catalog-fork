@@ -59,12 +59,14 @@ X_ROLE_NAME_X_repository_custom_yum: []
   #   url: "X_YUM_URL_X"
   #   gpgkey: "X_YUM_GPG_X"
 X_ROLE_NAME_X_repository_custom_apt: []
+X_ROLE_NAME_X_repository_custom_brew: "{{ X_ROLE_NAME_X_repository_custom_brew_common }}"
 
 # Set package repositories states
 X_ROLE_NAME_X_repository_catalog_distro: {}
 X_ROLE_NAME_X_repository_catalog_yum: {}
   # X_YUM_REPO_X: true
 X_ROLE_NAME_X_repository_catalog_apt: {}
+X_ROLE_NAME_X_repository_catalog_brew: "{{ X_ROLE_NAME_X_repository_catalog_brew_common }}"
 
 # Define OS subsystem states
 X_ROLE_NAME_X_subsystem_profile:

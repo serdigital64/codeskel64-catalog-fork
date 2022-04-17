@@ -2,12 +2,14 @@
 # collection:skeleton:type:source
 Ansible:collection-aplatform64:d:collection-aplatform64
 Ansible:collection-generic:d:collection-generic
-Ansible:molecule-aplatform64:d:molecule-aplatform64
+Ansible:molecule-aplatform64:d:molecule
 Ansible:role-aplatform64-full:d:role-aplatform64-full
 Ansible:role-generic:d:role-generic
 Bash:bashlib64-generic:f:template.bash
 Bash:library-generic:f:template.bash
 Bash:script-generic:f:template.bash
+Bash:batscore-generic:d:test
+Bash:testmansh-generic:d:test
 Container:dockerfile-generic:f:Dockerfile
 Container:dockerfile-hello_world:f:Dockerfile
 Container:dockerfile-ubuntu:f:Dockerfile
