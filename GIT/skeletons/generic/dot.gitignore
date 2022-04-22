@@ -4,11 +4,10 @@
 #
 
 .tmp/*
-.cache/*
 .var/*
 
 # VScode
-.vscode/*
+.vscode
 *.code-workspace
 
 # Builds for prod/dev/test

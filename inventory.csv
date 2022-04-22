@@ -5,6 +5,7 @@ Ansible:collection-generic:d:collection-generic
 Ansible:molecule-aplatform64:d:molecule
 Ansible:role-aplatform64-full:d:role-aplatform64-full
 Ansible:role-generic:d:role-generic
+Ansible:ansiblelint-role:f:.ansible-lint
 Bash:bashlib64-generic:f:template.bash
 Bash:library-generic:f:template.bash
 Bash:script-generic:f:template.bash
@@ -37,6 +38,7 @@ Python:modules-ansible:d:modules-ansible
 Terraform:module-generic:d:module-generic
 VSCode:configuration-full:d:vscode-setup
 VSCode:extensions-full:d:vscode-setup
+YAML:yamllint-ansible:f:.yamllint
 Combo:aplatform64-role:b:aplatform64-role
 Combo:git-generic:b:git-generic
 Combo:git-terraform-module:b:terraform-provider-module
