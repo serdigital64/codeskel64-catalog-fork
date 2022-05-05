@@ -1,7 +1,5 @@
 setup() {
-  . "X_BATS_HELPER_PATH_X/bats-support/load.bash"
-  . "X_BATS_HELPER_PATH_X/bats-assert/load.bash"
-  . "X_BATS_HELPER_PATH_X/bats-file/load.bash"
+  . "X_BATS_SETUP_PATH_X"
 }
 
 @test "X_TEST_NAME_X: X_TEST_DESCRIPTION_X" {

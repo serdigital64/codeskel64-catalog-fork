@@ -15,6 +15,7 @@ source "${BASH_SOURCE[0]%/*}/bashlib64.bash" || { echo "Error: unable to load ba
 # Globals
 #
 # Template # Use this section to declare global variables only. Settings are done in the function X_APP_NAMESPACE_X_setup_globals
+# Template # If there are too many definitions consider using a separated script.env file that can be sourced
 
 export X_APP_NAMESPACE_X_X_EXPORT_RO_X
 export X_APP_NAMESPACE_X_X_EXPORT_X
@@ -91,7 +92,6 @@ declare X_APP_NAMESPACE_X_command_tag=''
 declare X_APP_NAMESPACE_X_X_OPTION_X=''
 declare X_APP_NAMESPACE_X_X_FLAG_X='0'
 
-X_APP_NAMESPACE_X_setup_globals
 (($# == 0)) && X_APP_NAMESPACE_X_help && exit 1
 while getopts ':xwy:zh' X_APP_NAMESPACE_X_option; do
   case "$X_APP_NAMESPACE_X_option" in
@@ -105,9 +105,11 @@ while getopts ':xwy:zh' X_APP_NAMESPACE_X_option; do
     ;;
   y) X_APP_NAMESPACE_X_X_OPTION_X="$OPTARG" ;;
   z) X_APP_NAMESPACE_X_X_FLAG_X='1' ;;
-  h | \? | *) X_APP_NAMESPACE_X_help && exit 1 ;;
+  h) X_APP_NAMESPACE_X_help && exit 0 ;;
+  *) X_APP_NAMESPACE_X_help && exit 1 ;;
   esac
 done
+X_APP_NAMESPACE_X_setup_globals
 X_APP_NAMESPACE_X_check_requirements || exit 1
 
 bl64_msg_show_batch_start "$X_APP_NAMESPACE_X_command_tag"

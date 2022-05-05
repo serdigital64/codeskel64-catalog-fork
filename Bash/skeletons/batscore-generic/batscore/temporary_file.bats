@@ -1,9 +1,7 @@
 setup() {
   export TEST_SANDBOX
 
-  . "X_BATS_HELPER_PATH_X/bats-support/load.bash"
-  . "X_BATS_HELPER_PATH_X/bats-assert/load.bash"
-  . "X_BATS_HELPER_PATH_X/bats-file/load.bash"
+  . "X_BATS_SETUP_PATH_X"
 
   BATSLIB_TEMP_PRESERVE=0
   BATSLIB_TEMP_PRESERVE_ON_FAILURE=1
