@@ -1,8 +1,6 @@
 # Contributing
 
-## Development
-
-### Environment
+## Prepare Development Environment
 
 - Prepare dev tools
   - Install GIT
@@ -27,7 +25,13 @@
   source bin/X_PROJECT_NAME_DEV_X-set
   ```
 
-## Testing
+## Update source code
+
+- Add/Edit source code in: `src/`
+
+## Test source code
+
+- Add/update test-cases in: `test/batscore`
 
 ## Repositories
 
