@@ -46,10 +46,11 @@ X_ROLE_NAME_X_profiles:
   distro: {}
   # TODO: Remove this snippet if not used
   # distro:
-  #   X_APP_VERSION_X:
+  #   X_APP_VERSION_X: *X_ROLE_NAME_X_profiles_distro_X_APP_VERSION_X
   #     supported: true
   #     packages:
   #       - name: "X_APP_PACKAGE_X"
+  #   latest: *X_ROLE_NAME_X_profiles_distro_X_APP_VERSION_X
 
 # Define custom package repositories
 X_ROLE_NAME_X_repository_custom_yum: []

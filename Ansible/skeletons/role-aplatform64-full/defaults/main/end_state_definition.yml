@@ -3,7 +3,7 @@ X_ROLE_NAME_X_application:
   name: "X_APP_ID_X"
   type: "X_APP_TYPE_X"
   #type: "{{ (ansible_distribution == 'MacOSX') | ternary('brew', 'distro') }}"
-  version: "X_APP_VERSION_X"
+  version: "latest"
   installed: true
 
 X_ROLE_NAME_X_subsystem:
