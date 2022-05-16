@@ -1,5 +1,6 @@
 setup() {
-  . "X_BATS_SETUP_PATH_X"
+  # Load common settings
+  . "X_BATSCORE_SETUP_PATH_X"
 }
 
 @test "X_TEST_NAME_X: X_TEST_DESCRIPTION_X" {
@@ -8,7 +9,6 @@ setup() {
   #   skip 'this case can only be tested inside a container'
   # fi
 
-  set +u # to avoid IFS missing error in run function
   run X_TEST_TARGET_FUNCTION_X
   assert_success
 }

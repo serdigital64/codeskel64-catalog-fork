@@ -4,10 +4,10 @@
 # * Source this file from the first line of the setup() function in the test-case
 #
 
-test_batscore_root='X_BATS_HELPER_PATH_X'
-. "${test_batscore_root}/assert/load.bash"
-. "${test_batscore_root}/file/load.bash"
-. "${test_batscore_root}/support/load.bash"
+# Load bats-core plugins
+. "X_BATS_HELPER_ASSERT_PATH_X/load.bash"
+. "X_BATS_HELPER_FILE_PATH_X/load.bash"
+. "X_BATS_HELPER_SUPPORT_PATH_X/load.bash"
 
 # Do not overwrite signals already set by bats-core
 # ERR, DEBUG, EXIT

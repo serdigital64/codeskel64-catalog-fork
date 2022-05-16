@@ -1,5 +1,5 @@
 setup() {
-  . "X_BATS_SETUP_PATH_X"
+  . "X_BATSCORE_SETUP_PATH_X"
 }
 
 @test "X_TEST_NAME_X: X_TEST_DESCRIPTION_X" {
