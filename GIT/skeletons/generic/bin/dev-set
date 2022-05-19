@@ -1,0 +1,26 @@
+# ** ACTION REQUIRED: rename this file to devxxx-set where xxx is a short id for your project. Remove this line when done**
+#!/bin/sh
+#
+# Set development environment variables
+#
+# * Source this script from the project's root directory
+# * Template Version: v1.0.1
+#
+
+# Check calling location
+test -f ./.local
+if test $? -ne 0; then
+  echo "Error: source this file from the project's root directory" && return 1
+fi
+
+# Load local variables
+# shellcheck source=SCRIPTDIR/../.local
+. ./.local
+
+# Load secrets
+# shellcheck source=SCRIPTDIR/../.secrets
+. ./.secrets
+
+# Load global variables
+# shellcheck source=SCRIPTDIR/../.env
+. ./.env

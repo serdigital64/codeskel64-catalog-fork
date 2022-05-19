@@ -1,8 +1,8 @@
 # ** ACTION REQUIRED: this is a template file. Copy to .gitignore and remove this line **
 #
-# Project
+# GIT Ignore
 #
-# * Source template: dot.env (v1.0.1)
+# * Template version: 1.0.1
 #
 
 .tmp/*
@@ -28,5 +28,5 @@ lib/*
 !/**/.gitkeep
 
 #
-# Tools
+# Project specific exclusions
 #
