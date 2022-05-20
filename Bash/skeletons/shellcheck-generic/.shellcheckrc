@@ -1,7 +1,8 @@
-# Do not open external sources
-# external-sources=false
+#
+# External sources
+#
 
-# Global path for searching sources
+external-sources=true
 # source-path=
 
 #
@@ -12,5 +13,5 @@ enable=add-default-case
 enable=avoid-nullary-conditions
 enable=check-unassigned-uppercase
 enable=deprecate-which
-enable=quote-safe-variables
-enable=require-variable-braces
+# enable=quote-safe-variables
+# enable=require-variable-braces
