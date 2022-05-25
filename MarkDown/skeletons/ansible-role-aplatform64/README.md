@@ -81,7 +81,7 @@ X_ROLE_NAME_X_paths:
   X_DEFAULT_PATH_X:
 X_ROLE_NAME_X_owners:
   X_DEFAULT_USER_X:
-    name:
+    user:
     group:
     home:
 X_ROLE_NAME_X_firewall:
@@ -110,7 +110,7 @@ X_ROLE_NAME_X_setup_users:
 | X_ROLE_NAME_X_paths.X_DEFAULT_PATH_X           | yes          | string     | `"X_DEFAULT_PATH_VALUE_X"`          |                                     |
 | X_ROLE_NAME_X_owners                           | yes(prepare) | dictionary |                                     | Define users                        |
 | X_ROLE_NAME_X_owners.X_DEFAULT_USER_X          | yes          | dictionary |                                     | Define directory structure owner    |
-| X_ROLE_NAME_X_owners.X_DEFAULT_USER_X.name     | yes          | string     | `"X_DEFAULT_USER_NAME_X"`           | Set login name                      |
+| X_ROLE_NAME_X_owners.X_DEFAULT_USER_X.user     | yes          | string     | `"X_DEFAULT_USER_NAME_X"`           | Set login name                      |
 | X_ROLE_NAME_X_owners.X_DEFAULT_USER_X.group    | yes          | string     | `"X_DEFAULT_USER_GROUP_X"`          | Set group name                      |
 | X_ROLE_NAME_X_owners.X_DEFAULT_USER_X.home     | yes          | string     | `"X_DEFAULT_USER_HOME_X"`           | Set home directory                  |
 | X_ROLE_NAME_X_firewall                         | yes(setup)   | dictionary |                                     | OS Firewall options                 |
