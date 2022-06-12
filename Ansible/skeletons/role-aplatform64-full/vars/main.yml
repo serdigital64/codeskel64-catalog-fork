@@ -15,6 +15,11 @@ X_ROLE_NAME_X_platforms:
   - "Debian11"
   - "MacOSX12"
 
+# # Define supported CPU architectures
+# X_ROLE_NAME_X_machines:
+#   - "x86_64"
+#   - "arm_64"
+
 # Group Linux Distributions by family
 X_ROLE_NAME_X_os_family: "
   {%- if
@@ -92,9 +97,6 @@ X_ROLE_NAME_X_base_common:
   files: {}
   run: {}
   etc: {}
-  # run:
-  #   X_APP_TYPE_X:
-  #     X_BASE_RUN_X: "X_BASE_RUN_VALUE_X"
   # templates:
   #   X_TEMPLATE_SERVER_X: "X_TEMPLATE_SERVER_NAME_X.j2"
   # paths:
@@ -104,6 +106,9 @@ X_ROLE_NAME_X_base_common:
   #   X_BASE_FILE_SETUP_X: "X_BASE_FILE_SETUP_VALUE_X"
   # run:
   #   X_BASE_RUN_X: "X_BASE_RUN_VALUE_X"
+  # run:
+  #   X_APP_TYPE_X:
+  #     X_BASE_RUN_X: "X_BASE_RUN_VALUE_X"
   # etc:
   #   X_BASE_ETC_X: "X_BASE_ETC_VALUE_X"
 

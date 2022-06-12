@@ -5,6 +5,10 @@
     fail_msg: "Target Platform not supported: {{ ansible_distribution + ansible_distribution_major_version }}"
     that:
       - ansible_distribution + ansible_distribution_major_version in X_ROLE_NAME_X_platforms
+    # fail_msg: "Target Platform not supported: {{ ansible_distribution + ansible_distribution_major_version + '/' + ansible_architecture }}"
+    # that:
+    #   - ansible_distribution + ansible_distribution_major_version in X_ROLE_NAME_X_platforms
+    #   - ansible_architecture in X_ROLE_NAME_X_machines
 
 # TODO: Remove this snippet if not used
 # - name: "X_TASK_COLLECTION_NAME_X / X_TASK_ROLE_NAME_X / Initialize / Check required parameters"

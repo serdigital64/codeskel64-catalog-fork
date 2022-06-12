@@ -13,6 +13,8 @@
         gather_timeout: "10"
 
     - name: "Load role variables"
+      vars:
+        X_ROLE_NAME_X_application: "{{ test_X_ROLE_NAME_X_application_brew }}"
       ansible.builtin.include_role:
         public: true
         name: "X_ROLE_NAME_X"
@@ -20,7 +22,7 @@
     - name: "Detect target path"
       ansible.builtin.stat:
         path: "{{ X_ROLE_NAME_X_base['run']['X_FILE1_X'] }}"
-#        path: "{{ infra_terraform_base['run'][infra_terraform_application['type']]['terraform'] }}"
+#        path: "{{ X_ROLE_NAME_X_base['run'][X_ROLE_NAME_X_application['type']]['X_FILE1_X'] }}"
       register: file_stat
 
     - name: "Verify app is installed"
