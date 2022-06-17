@@ -1,5 +1,10 @@
-# last update: 9-APR-2022
-# combo:collection:skeleton
+#
+# Combo Definition
+#
+# * Format: CSV
+# * Fields: combo:collection:skeleton
+# * Last update: 9-APR-2022
+#
 aplatform64-role:Ansible:molecule-aplatform64
 aplatform64-role:Ansible:role-aplatform64-full
 aplatform64-role:Licenses:git-coc
