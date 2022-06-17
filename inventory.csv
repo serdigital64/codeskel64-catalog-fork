@@ -1,5 +1,5 @@
-# last update: 9-APR-2022
-# collection:skeleton:type:source
+# last update: 17-JUN-2022
+# collection:skeleton:type:default_name
 Ansible:collection-aplatform64:d:collection-aplatform64
 Ansible:collection-generic:d:collection-generic
 Ansible:molecule-aplatform64:d:molecule
@@ -16,8 +16,10 @@ Container:dockerfile-generic:f:Dockerfile
 Container:dockerfile-hello_world:f:Dockerfile
 Container:dockerfile-ubuntu:f:Dockerfile
 Go:main-hello-world:f:main.go
-GIT:generic:d:project
-GIT:terraform-module:d:terraform-provider-module
+GHActions:lint-bash-testmansh:d:_project_
+GHActions:test-bash-testmansh:d:_project_
+GIT:generic:d:_project_
+GIT:terraform-module:d:_project_
 Licenses:apache-v2:f:LICENSE
 Licenses:git-coc:f:CODE_OF_CONDUCT.md
 Licenses:gnu-v3:f:COPYING
@@ -38,8 +40,8 @@ MkDocs:configuration-material:d:configuration-material
 MkDocs:configuration-readthedocs:d:configuration-readthedocs
 Python:modules-ansible:d:modules-ansible
 Terraform:module-generic:d:module-generic
-VSCode:configuration-full:d:vscode-setup
-VSCode:extensions-full:d:vscode-setup
+VSCode:configuration-full:d:_project_
+VSCode:extensions-full:d:_project_
 YAML:yamllint-ansible:f:.yamllint
 Combo:aplatform64-role:b:aplatform64-role
 Combo:git-generic:b:git-generic
