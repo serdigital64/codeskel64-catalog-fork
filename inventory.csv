@@ -3,15 +3,17 @@
 #
 # * Format: CSV
 # * Fields: collection:skeleton:type:default_name
-# * Last update: 17-JUN-2022
+# * Last update: 25-JUN-2022
 #
 Ansible:ansiblelint-role:f:.ansible-lint
-Ansible:collection-aplatform64:d:collection-aplatform64
-Ansible:collection-generic:d:collection-generic
-Ansible:molecule-aplatform64:d:molecule
-Ansible:role-aplatform64-full:d:role-aplatform64-full
-Ansible:role-generic:d:role-generic
+Ansible:collection-aplatform64:d:collection-template
+Ansible:collection-generic:d:collection-template
+Ansible:molecule-aplatform64:d:molecule-template
+Ansible:role-aplatform64-full:d:role-template
+Ansible:role-generic:d:role-template
+Bash:bashlib64-build:f:devALIAS-build
 Bash:bashlib64-generic:f:template.bash
+Bash:bashlib64-modular:d:script-template
 Bash:library-generic:f:template.bash
 Bash:script-generic:f:template.bash
 Combo:aplatform64-role:b:aplatform64-role
@@ -43,11 +45,11 @@ MarkDown:shellscript-generic-v1:f:README.md
 MarkDown:shellscript-generic-v2:f:README.md
 MarkDown:terraform-module:f:README.md
 MarkDown:terraform-terra4cloud64:f:README.md
-MkDocs:configuration-material:d:configuration-material
-MkDocs:configuration-readthedocs:d:configuration-readthedocs
-Python:modules-ansible:d:modules-ansible
+MkDocs:configuration-material:d:doc-template
+MkDocs:configuration-readthedocs:d:doc-template
+Python:modules-ansible:d:module-template
 ShellCheck:bash-generic:f:.shellcheckrc
-Terraform:module-generic:d:module-generic
+Terraform:module-generic:d:module-template
 TestManSH:bash-generic:d:test
 VSCode:configuration-full:d:_project_
 VSCode:extensions-full:d:_project_

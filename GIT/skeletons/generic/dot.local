@@ -9,5 +9,5 @@
 #
 
 # Project base location. Adjust to your local GIT repo
-X_PROJECT_NAME_DEV_CAPS_X_ROOT="${HOME}/git"
+X_PROJECT_NAME_DEV_CAPS_X_ROOT="${HOME}/X_PROJECT_REPO_NAME_X"
 export X_PROJECT_NAME_DEV_CAPS_X_ROOT

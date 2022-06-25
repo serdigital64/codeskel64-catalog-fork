@@ -12,7 +12,7 @@ provisioner:
   name: "ansible"
   log: ${DEVAP_TEST_DEBUG}
   ansible_args:
-    - ${DEVAP_TEST_ANSIBLE_VERBOSE}
+    - "${DEVAP_TEST_ANSIBLE_VERBOSE}"
   env:
     # Required to let molecule find installed collections in test environment
     ANSIBLE_COLLECTIONS_PATHS: ${ANSIBLE_COLLECTIONS_PATHS}
@@ -163,6 +163,24 @@ platforms:
     command: "/lib/systemd/systemd"
   - name: "fedora35"
     image: "ghcr.io/serdigital64/fedora-35-ansible-node:latest"
+    pre_build_image: true
+    groups:
+      - "fedora"
+      - "fedora_systemd"
+      - "redhat"
+      - "redhat_systemd"
+      - "linux"
+      - "linux_systemd"
+    tmpfs:
+      - "/run"
+      - "/tmp"
+    volumes:
+      - "/sys/fs/cgroup:/sys/fs/cgroup:ro"
+    capabilities:
+      - "SYS_ADMIN"
+    command: "/lib/systemd/systemd"
+  - name: "fedora36"
+    image: "ghcr.io/serdigital64/fedora-36-ansible-node:latest"
     pre_build_image: true
     groups:
       - "fedora"
