@@ -18,6 +18,7 @@ Bash:library-generic:f:template.bash
 Bash:script-generic:f:template.bash
 Combo:aplatform64-role:b:aplatform64-role
 Combo:git-generic:b:git-generic
+Combo:git-helm64:b:git-helm64
 Combo:git-shellscript:b:git-shellscript
 Combo:git-terraform-module:b:terraform-provider-module
 Combo:git-terraform-terra4cloud64:b:terraform-provider-terra4cloud64
