@@ -8,9 +8,9 @@
 Ansible:ansiblelint-role:f:.ansible-lint
 Ansible:collection-aplatform64:d:collection-template
 Ansible:collection-generic:d:collection-template
-Ansible:molecule-aplatform64:d:molecule-template
-Ansible:role-aplatform64-full:d:role-template
-Ansible:role-generic:d:role-template
+Ansible:molecule-aplatform64:d:_project_
+Ansible:role-aplatform64-full:d:_project_
+Ansible:role-generic:d:_project_
 Bash:bashlib64-build:f:devALIAS-build
 Bash:bashlib64-generic:f:template.bash
 Bash:bashlib64-modular:d:script-template
@@ -27,8 +27,11 @@ Container:dockerfile-ubuntu:f:Dockerfile
 GHActions:lint-bash-testmansh:d:_project_
 GHActions:test-bash-testmansh:d:_project_
 GIT:generic:d:_project_
+GIT:helm-generic:d:_project_
 GIT:terraform-module:d:_project_
 Go:main-hello-world:f:main.go
+Helm:generic:d:_project_
+Helm:helm64:d:_project_
 Licenses:apache-v2:f:LICENSE
 Licenses:git-coc:f:CODE_OF_CONDUCT.md
 Licenses:gnu-v3:f:COPYING
