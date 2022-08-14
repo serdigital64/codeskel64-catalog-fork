@@ -41,10 +41,12 @@ MarkDown:ansible-collection-generic:f:README.md
 MarkDown:ansible-playbook-aplatform64:f:README.md
 MarkDown:ansible-role-aplatform64:f:README.md
 MarkDown:ansible-role-generic:f:README.md
+MarkDown:helm-helm64:f:README.md
 MarkDown:project-generic-changelog:f:CHANGELOG.md
 MarkDown:project-generic-contributing:f:CONTRIBUTING.md
 MarkDown:project-generic-readme-v1:f:README.md
 MarkDown:project-generic-readme-v2:f:README.md
+MarkDown:project-monorepo-readme-v1:f:README.md
 MarkDown:shellscript-generic-v1:f:README.md
 MarkDown:shellscript-generic-v2:f:README.md
 MarkDown:terraform-module:f:README.md

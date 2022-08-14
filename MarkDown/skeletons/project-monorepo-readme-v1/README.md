@@ -6,13 +6,10 @@ X_PROJECT_INFO_X
 
 X_PROJECT_DESCRIPTION_X
 
-## Usage
+## Repositories
 
-## Deployment
-
-### Requirements
-
-### Installation
+- Project GIT repository: [X_PROJECT_GIT_URL_X](X_PROJECT_GIT_URL_X)
+- Project Documentation: [X_PROJECT_DOC_URL_X](X_PROJECT_DOC_URL_X)
 
 ## Contributing
 

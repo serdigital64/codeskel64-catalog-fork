@@ -57,7 +57,7 @@ Help on implementing new features and maintaining the code base is welcomed.
 
 ## License
 
-[GPL-3.0-or-later](https://www.gnu.org/licenses/gpl-3.0.txt)
+[<X_LICENSE_ID_X>](<X_LICENSE_URL_X>)
 
 ## Author
 
