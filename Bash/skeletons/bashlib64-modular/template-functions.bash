@@ -3,49 +3,45 @@
 #
 
 function X_APP_NAMESPACE_X_X_FUNCTION_COMMAND1_X() {
-
   local option="$1"
   local flag="$2"
   local -i status=1
 
+  # Template # bl64_check_parameter 'option' || return 1
   :
   status=$?
 
   return $status
-
 }
 
 function X_APP_NAMESPACE_X_X_FUNCTION_COMMAND2_X() {
-
   local -i status=1
 
   :
   status=$?
 
   return $status
-
 }
 
 # Template # Use this function to set global values only.
-function X_APP_NAMESPACE_X_setup_globals() {
-  readonly X_APP_NAMESPACE_X_X_EXPORT_RO_X=''
-  X_APP_NAMESPACE_X_X_EXPORT_X=''
-}
+function X_APP_NAMESPACE_X_initialize() {
+  local verbose="$1"
+  local debug="$2"
 
-# Template # Use this function for global requirements only.
-function X_APP_NAMESPACE_X_check_requirements() {
+  [[ -z "$X_APP_NAMESPACE_X_command" ]] && X_APP_NAMESPACE_X_help && return 1
+  bl64_dbg_set_level "$debug" &&
+    bl64_msg_set_level "$verbose" ||
+    return $?
 
-  [[ -z "$X_APP_NAMESPACE_X_command" ]] && X_APP_NAMESPACE_X_help && exit 1
-  #bl64_check_command '' || return 1
-  #bl64_check_file '' || return 1
+  # Template # bl64_check_command '' || return 1
+  # Template # bl64_check_file '' || return 1
+
   return 0
-
 }
 
 function X_APP_NAMESPACE_X_help() {
-
   bl64_msg_show_usage \
-    '-x|-w [-y X_OPT1_X] [-z] [-h]' \
+    '-x|-w [-y X_OPT1_X] [-z] [-V Verbose] [-D Debug] [-h]' \
     'X_APP_INFO_X' \
     '
     -x         :
@@ -55,6 +51,7 @@ function X_APP_NAMESPACE_X_help() {
     -h         : Show help
     ' '
     -y X_OPT1_X:
+    -V Verbose : Set verbosity level. Format: one of BL64_MSG_VERBOSE_*
+    -D Debug   : Enable debugging mode. Format: one of BL64_DBG_TARGET_*
     '
-
 }

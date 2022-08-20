@@ -41,4 +41,4 @@ Help on implementing new features and maintaining the code base is welcomed.
 
 ## Author
 
-- [SerDigital64](https://serdigital64.github.io/)
+- [SerDigital64](https://github.com/serdigital64)
