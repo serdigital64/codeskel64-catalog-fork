@@ -57,6 +57,7 @@ Python:modules-ansible:d:module-template
 ShellCheck:bash-generic:f:.shellcheckrc
 Terraform:module-generic:d:module-template
 TestManSH:bash-generic:d:test
+TestManTF:main-generic:d:terraform
 VSCode:configuration-full:d:_project_
 VSCode:extensions-full:d:_project_
 YAML:yamllint-ansible:f:.yamllint

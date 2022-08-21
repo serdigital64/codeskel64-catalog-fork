@@ -30,7 +30,7 @@ while getopts ':xwy:zV:D:h' X_APP_NAMESPACE_X_option; do
   *) X_APP_NAMESPACE_X_help && exit 1 ;;
   esac
 done
-X_APP_NAMESPACE_X_initialize "$X_APP_NAMESPACE_X_debug" "$X_APP_NAMESPACE_X_verbose" || exit 1
+X_APP_NAMESPACE_X_initialize "$X_APP_NAMESPACE_X_verbose" "$X_APP_NAMESPACE_X_debug" || exit 1
 
 bl64_msg_show_batch_start "$X_APP_NAMESPACE_X_command_tag"
 case "$X_APP_NAMESPACE_X_command" in
