@@ -48,10 +48,11 @@ function X_APP_NAMESPACE_X_X_FUNCTION_COMMAND2_X() {
 
 # Template # Use this function to set global values only.
 function X_APP_NAMESPACE_X_initialize() {
-  local verbose="$1"
-  local debug="$2"
+  local debug="$1"
+  local verbose="$2"
+  local command="$3"
 
-  [[ -z "$X_APP_NAMESPACE_X_command" ]] && X_APP_NAMESPACE_X_help && return 1
+  [[ -z "$command" ]] && X_APP_NAMESPACE_X_help && return 1
   bl64_dbg_set_level "$debug" &&
     bl64_msg_set_level "$verbose" ||
     return $?
@@ -111,7 +112,7 @@ while getopts ':xwy:zV:D:h' X_APP_NAMESPACE_X_option; do
   *) X_APP_NAMESPACE_X_help && exit 1 ;;
   esac
 done
-X_APP_NAMESPACE_X_initialize "$X_APP_NAMESPACE_X_debug" "$X_APP_NAMESPACE_X_verbose" || exit 1
+X_APP_NAMESPACE_X_initialize "$X_APP_NAMESPACE_X_debug" "$X_APP_NAMESPACE_X_verbose" "$X_APP_NAMESPACE_X_command" || exit 1
 
 bl64_msg_show_batch_start "$X_APP_NAMESPACE_X_command_tag"
 case "$X_APP_NAMESPACE_X_command" in
