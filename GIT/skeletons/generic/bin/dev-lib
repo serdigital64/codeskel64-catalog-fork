@@ -1,4 +1,3 @@
-# ** ACTION REQUIRED: rename this file to devALIAS-set where ALIAS is a short id for your project. Remove this line when done**
 #!/usr/bin/env bash
 #
 # Update dev-time external tools
@@ -10,6 +9,6 @@
 #
 
 # shellcheck source=SCRIPTDIR/devALIAS-set
-source ./bin/devALIAS-set || exit 1
+source ./bin/dev-set || exit 1
 
 # Add update commands

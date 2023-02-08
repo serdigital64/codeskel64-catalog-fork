@@ -12,12 +12,14 @@
 
 - Adjust environment variables to reflect your configuration:
 
+  - Copy environment definition files from templates:
+
   ```shell
-  # Copy environment definition files from templates:
   cp dot.local .local
   cp dot.secrets .secrets
-  # Review and update content for both files
   ```
+
+  - Review and update content for both files to match your environment
 
 - Initialize dev environment variables
 
@@ -31,7 +33,7 @@
 
 ## Test source code
 
-- Add/update test-cases in: `test/batscore`
+- Add/update test-cases in: `test/`
 
 ## Repositories
 
