@@ -22,7 +22,7 @@ X_ROLE_NAME_X_platforms:
 #   - "arm_64"
 
 # Group Linux Distributions by family
-X_ROLE_NAME_X_os_family: "
+X_ROLE_NAME_X_os_family: |
   {%- if
       ( ansible_distribution == 'CentOS' ) or
       ( ansible_distribution == 'RedHat' ) or
@@ -44,7 +44,6 @@ X_ROLE_NAME_X_os_family: "
   {%- else -%}
     {{ 'NotSupported' }}
   {%- endif -%}
-  "
 
 # Multiplatform packages
 X_ROLE_NAME_X_profiles_common:

@@ -15,7 +15,7 @@
 # source X_PATH_LIBRARY_X
 
 #
-# Exports
+# Globals
 #
 
 readonly X_APP_NAMESPACE_X_X_EXPORT_RO_X=''
