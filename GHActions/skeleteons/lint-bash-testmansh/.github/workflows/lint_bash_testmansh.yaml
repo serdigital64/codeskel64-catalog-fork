@@ -7,7 +7,7 @@ on:
     branches:
       - "feature/*"
       - "develop"
-      - "master"
+      - "main"
 
 jobs:
   lint-bash-testmansh:
@@ -22,5 +22,4 @@ jobs:
 
       - name: "Run Bash linter"
         run: "./lib/testmansh -t -c <PATH_TO_BASH_SRC>"
-
 ...

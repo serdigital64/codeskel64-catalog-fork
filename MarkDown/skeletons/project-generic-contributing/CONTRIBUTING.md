@@ -10,7 +10,7 @@
   git clone X_PROJECT_GIT_URL_X
   ```
 
-- Adjust environment variables to reflect your configuration:
+- Adjust environment variables to match your configuration:
 
   - Copy environment definition files from templates:
 
@@ -21,10 +21,16 @@
 
   - Review and update content for both files to match your environment
 
-- Initialize dev environment variables
+- Download dev support scripts
 
   ```shell
-  source bin/X_PROJECT_NAME_DEV_X-set
+  ./bin/X_PROJECT_NAME_DEV_X-lib
+  ```
+
+- Load dev environment variables
+
+  ```shell
+  source bin/devcs-set
   ```
 
 ## Update source code
