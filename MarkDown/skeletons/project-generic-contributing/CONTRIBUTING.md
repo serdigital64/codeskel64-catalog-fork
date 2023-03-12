@@ -30,7 +30,7 @@
 - Load dev environment variables
 
   ```shell
-  source bin/devcs-set
+  source bin/X_PROJECT_NAME_DEV_X-set
   ```
 
 ## Update source code
