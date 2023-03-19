@@ -28,14 +28,10 @@ function X_APP_NAMESPACE_X_X_FUNCTION_COMMAND2_X() {
 # RemoveMe # Use this function to set global values only.
 function X_APP_NAMESPACE_X_initialize() {
   bl64_dbg_app_show_function "@"
-  local verbose="$1"
-  local debug="$2"
+  local command="$1"
 
-  bl64_dbg_set_level "$debug" &&
-    bl64_msg_set_level "$verbose" ||
-    return $?
-
-  [[ -z "$X_APP_NAMESPACE_X_command" ]] && X_APP_NAMESPACE_X_help && return 1
+  bl64_check_parameter 'command' ||
+    { X_APP_NAMESPACE_X_help && return 1; }
 
   # RemoveMe # bl64_check_command '' || return 1
   # RemoveMe # bl64_check_file '' || return 1
