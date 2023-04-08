@@ -3,65 +3,71 @@
 # Set development environment variables
 #
 # * Source this script from the project's root directory
-# * Template Version: v2.0.0
+# * Template Version: v3.0.0
 #
 
 #
 # Functions
 #
 
+function dev_set_message() {
+  local msg="$1"
+  [[ "$DEV_SET_VERBOSE" == 'verbose' ]] && echo "$msg"
+  return 0
+}
+
 function dev_set_load_local() {
   local dot_local='.local'
   local dot_secrets='.secrets'
 
-  echo "Load local environment variables ($(pwd)/${dot_local})"
+  dev_set_message "Load local environment variables ($(pwd)/${dot_local})"
   # shellcheck source=SCRIPTDIR/../.local
   source "$dot_local" ||
     {
-      echo "Error: unable to source file"
+      dev_set_message "Error: unable to source file"
       return 1
     }
-  dot_secrets="${X_PROJECT_NAME_DEV_CAPS_X_ROOT}/${dot_secrets}"
+  dot_secrets="${DEVTMTF_ROOT}/${dot_secrets}"
   if [[ -f "$dot_secrets" ]]; then
-    echo "Load local secrets (${dot_secrets})"
+    dev_set_message "Load local secrets (${dot_secrets})"
     # shellcheck source=SCRIPTDIR/../.secrets
     source "${dot_secrets}" ||
       {
-        echo "Error: unable to source file"
+        dev_set_message "Error: unable to source file"
         return 1
       }
   fi
 }
 
 function dev_set_load_github() {
-  echo "GitHub detected, setting project root (${GITHUB_WORKSPACE})"
+  dev_set_message "GitHub detected, setting project root (${GITHUB_WORKSPACE})"
   # shellcheck disable=SC2155
-  export X_PROJECT_NAME_DEV_CAPS_X_ROOT="$GITHUB_WORKSPACE"
+  export DEVTMTF_ROOT="$GITHUB_WORKSPACE"
 }
 
 function dev_set_load_testmansh() {
-  echo "Testmansh container detected, setting project root (${TESTMANSH_PROJECT_ROOT})"
-  export X_PROJECT_NAME_DEV_CAPS_X_ROOT="$TESTMANSH_PROJECT_ROOT"
+  dev_set_message "Testmansh container detected, setting project root (${TESTMANSH_PROJECT_ROOT})"
+  export DEVTMTF_ROOT="$TESTMANSH_PROJECT_ROOT"
 }
 
 function dev_set_load_exported() {
-  echo 'Read X_PROJECT_NAME_DEV_CAPS_X_ROOT variable from exported shell environment'
+  dev_set_message 'Read DEVTMTF_ROOT variable from exported shell environment'
 }
 
 function dev_set_check_root() {
-  if [[ -z "$X_PROJECT_NAME_DEV_CAPS_X_ROOT" ]]; then
-    echo "Error: unable to identify current repository location. Check that the variable X_PROJECT_NAME_DEV_CAPS_X_ROOT is correctly set" &&
+  if [[ -z "$DEVTMTF_ROOT" ]]; then
+    dev_set_message "Error: unable to identify current repository location. Check that the variable DEVTMTF_ROOT is correctly set" &&
       return 1
   fi
 }
 
 function dev_set_load_env() {
-  local dot_env="${X_PROJECT_NAME_DEV_CAPS_X_ROOT}/.env"
-  echo "Load project environment variables (${dot_env})"
+  local dot_env="${DEVTMTF_ROOT}/.env"
+  dev_set_message "Load project environment variables (${dot_env})"
   # shellcheck source=SCRIPTDIR/../.env
   source "$dot_env" ||
     {
-      echo "Error: unable to read environment variables"
+      dev_set_message "Error: unable to read environment variables"
       return 1
     }
 }
@@ -69,6 +75,8 @@ function dev_set_load_env() {
 #
 # Main
 #
+
+declare DEV_SET_VERBOSE="${1:-no}"
 
 # shellcheck disable=SC2154
 if [[ -f ./.local ]]; then
@@ -82,7 +90,5 @@ else
 fi
 
 dev_set_check_root &&
-  dev_set_load_env ||
-  return $?
-
-echo 'Dev environment variables loading completed OK'
+  dev_set_load_env &&
+  dev_set_message 'Dev environment variables loading completed OK'

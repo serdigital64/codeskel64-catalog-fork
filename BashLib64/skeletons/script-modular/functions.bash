@@ -33,9 +33,6 @@ function X_APP_NAMESPACE_X_initialize() {
   bl64_check_parameter 'command' ||
     { X_APP_NAMESPACE_X_help && return 1; }
 
-  # RemoveMe # bl64_check_command '' || return 1
-  # RemoveMe # bl64_check_file '' || return 1
-
   return 0
 }
 

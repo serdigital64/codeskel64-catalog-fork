@@ -19,7 +19,7 @@
 #
 
 readonly X_APP_NAMESPACE_X_X_EXPORT_RO_X=''
-export X_APP_NAMESPACE_X_X_EXPORT_X=''
+# Example # export X_APP_NAMESPACE_X_X_EXPORT_X=''
 
 #
 # Functions

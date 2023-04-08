@@ -19,8 +19,8 @@ source "./bashlib64.bash" || { echo "Error: unable to load bashlib64" && exit 1;
 # RemoveMe # Use this section to declare global variables only. Settings are done in the function X_APP_NAMESPACE_X_initialize
 # RemoveMe # If there are too many definitions consider using a separated script.env file that can be sourced
 
-export X_APP_NAMESPACE_X_X_EXPORT_RO_X=''
-export X_APP_NAMESPACE_X_X_EXPORT_X=''
+# Example # export X_APP_NAMESPACE_X_X_EXPORT_RO_X=''
+# Example # export X_APP_NAMESPACE_X_X_EXPORT_X=''
 
 #
 # Functions
@@ -56,9 +56,6 @@ function X_APP_NAMESPACE_X_initialize() {
 
   bl64_check_parameter 'command' ||
     { X_APP_NAMESPACE_X_help && return 1; }
-
-  # RemoveMe # bl64_check_command '' || return 1
-  # RemoveMe # bl64_check_file '' || return 1
 
   return 0
 }

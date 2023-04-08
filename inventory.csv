@@ -11,7 +11,7 @@ Ansible:collection-generic:d:collection-template
 Ansible:molecule-aplatform64:d:_project_
 Ansible:role-aplatform64-full:d:_project_
 Ansible:role-generic:d:_project_
-Bash:bashlib64-build:f:devALIAS-build
+Bash:bashlib64-build:f:dev-build
 Bash:bashlib64-generic:f:template.bash
 Bash:bashlib64-modular:d:script-template
 Bash:library-generic:f:template.bash
