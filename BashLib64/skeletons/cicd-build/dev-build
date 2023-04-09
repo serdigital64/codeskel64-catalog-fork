@@ -12,7 +12,7 @@ source ./bin/dev-set || exit 1
 source "$X_PROJECT_NAME_DEV_CAPS_X_CICD_BASHLIB64" || exit 1
 
 # shellcheck disable=SC2154
-bl64_msg_show_text "Build app (${X_PROJECT_NAME_DEV_CAPS_X_BUILD_PROD})"
+bl64_msg_show_text "Build app (${X_PROJECT_NAME_DEV_CAPS_X_BUILD_NAME})"
 bl64_fs_merge_files \
   '0755' \
   "$BL64_VAR_DEFAULT" \
