@@ -31,7 +31,6 @@ Installer64:installer:f:install-package
 
 GHActions:bashlib64:d:_project_
 
-GIT:repo-bashlib64-generic:d:_project_
 GIT:repo-code-generic:d:_project_
 GIT:repo-helm-generic:d:_project_
 GIT:repo-terraform-module:d:_project_
@@ -82,6 +81,7 @@ TestManTF:main-generic:d:terraform
 
 VSCode:configuration-full:d:_project_
 VSCode:devcontainer-base:d:_project_
+VSCode:extensions-ansible:d:_project_
 VSCode:extensions-base:d:_project_
 VSCode:extensions-full:d:_project_
 VSCode:extensions-k8s:d:_project_
