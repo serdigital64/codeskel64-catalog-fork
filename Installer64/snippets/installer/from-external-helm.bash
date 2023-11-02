@@ -29,12 +29,15 @@ export INST64_X_APP_NAME_CAPS_X_HELM_SOURCE='X_REPO_SOURCE_X'
 export INST64_X_APP_NAME_CAPS_X_K8S_NAMESPACE='argocd'
 
 # X_CODE_PLACEHOLDER_3_X
-  inst64_X_APP_NAME_X_install_helm_chart
+  if [[ "$INST64_X_APP_NAME_CAPS_X_METHOD" == 'HELM' ]]; then
+    inst64_X_APP_NAME_X_install_helm_chart
+  fi
 
 # X_CODE_PLACEHOLDER_4_X
   bl64_os_check_version \
     "${X_BL64_OS_ID_X}" &&
-    bl64_fmt_check_value_in_list 'invalid installation method for the parameter INST64_X_APP_NAME_CAPS_X_METHOD' "$INST64_X_APP_NAME_CAPS_X_METHOD" \
+    bl64_fmt_check_value_in_list 'invalid installation method for the parameter INST64_X_APP_NAME_CAPS_X_METHOD' \
+      "$INST64_X_APP_NAME_CAPS_X_METHOD" \
       'HELM' &&
     bl64_check_privilege_not_root &&
     bl64_k8s_setup &&
