@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
-# Template: 1.2.0
+# Template: 2.0.0
 #######################################
 # Installer64 / Package installer
 #
@@ -27,17 +27,24 @@
 # Imports
 #
 
-# Base Installer64 parameters
-export INST64_BASHLIB64="${INST64_BASHLIB64:-/opt/bl64/bashlib64.bash}"
+# BashLib64 location
+export INST64_BASHLIB64="${INST64_BASHLIB64:-/opt/bl64}"
+# Enable debugging? Set to YES to enable
 export INST64_DEBUG="${INST64_DEBUG:-}"
+# Installer64 location
 export INST64_INSTALLER_ROOT="${INST64_INSTALLER_ROOT:-/opt/installer64}"
+# Base path for local applications
 export INST64_LOCAL_ROOT="${INST64_LOCAL_ROOT:-/usr/local}"
+# Local applications binaries location
 export INST64_LOCAL_BIN="${INST64_LOCAL_BIN:-${INST64_LOCAL_ROOT}/bin}"
+# Base path for 3rd party applications
 export INST64_OPT_ROOT="${INST64_OPT_ROOT:-/opt}"
+# Location for temporary files
 export INST64_TMP="${INST64_TMP:-/tmp}"
 
 # shellcheck source=SCRIPTDIR/../lib/bashlib64.bash
-source "$INST64_BASHLIB64" || { echo 'Error: BashLib64 not found. Please run the install-bashlib64 script and retry.' && exit 1; }
+source "${INST64_BASHLIB64}/bashlib64.bash" ||
+  { echo 'Error: BashLib64 not found. Please run the install-bashlib64 script and retry.' && exit 1; }
 
 # X_CODE_PLACEHOLDER_1_X
 
@@ -46,6 +53,8 @@ source "$INST64_BASHLIB64" || { echo 'Error: BashLib64 not found. Please run the
 #
 
 # X_CODE_PLACEHOLDER_2_X
+export INST64_X_APP_NAME_CAPS_X_PACKAGES=''
+export INST64_X_APP_NAME_CAPS_X_CLI_NAME='X_CLI_NAME_X'
 
 #
 # Functions
@@ -64,7 +73,60 @@ source "$INST64_BASHLIB64" || { echo 'Error: BashLib64 not found. Please run the
 #######################################
 function inst64_X_APP_NAME_X_install() {
   bl64_dbg_app_show_function
+  inst64_X_APP_NAME_X_select_packages || return $?
   # X_CODE_PLACEHOLDER_3_X
+}
+
+#######################################
+# Select installation packages and related information
+#
+# Arguments:
+#   None. Parameters are imported from Globals
+# Outputs:
+#   Package name list
+# Returns:
+#   0: selection ok
+#   >0: selection failed
+#######################################
+function inst64_X_APP_NAME_X_select_packages() {
+  bl64_dbg_app_show_function
+  # X_CODE_PLACEHOLDER_8_X
+  [[ -z "$INST64_X_APP_NAME_CAPS_X_PACKAGES" ]] && bl64_msg_show_error 'unable to determine package name' && return 1
+  return 0
+}
+
+#######################################
+# Prepare installation
+#
+# Arguments:
+#   None. Parameters are imported from Globals
+# Outputs:
+#   Preparation progress and errors
+# Returns:
+#   0: preparation ok
+#   >0: preparation failed
+#######################################
+function inst64_X_APP_NAME_X_prepare() {
+  bl64_dbg_app_show_function
+  bl64_msg_show_task 'prepare deployment'
+  # X_CODE_PLACEHOLDER_6_X
+}
+
+#######################################
+# Verify installation
+#
+# Arguments:
+#   None. Parameters are imported from Globals
+# Outputs:
+#   Verification progress and errors
+# Returns:
+#   0: verification ok
+#   >0: verification failed
+#######################################
+function inst64_X_APP_NAME_X_verify() {
+  bl64_dbg_app_show_function
+  bl64_msg_show_task 'verify deployment'
+  # X_CODE_PLACEHOLDER_7_X
 }
 
 #######################################
@@ -76,7 +138,7 @@ function inst64_X_APP_NAME_X_install() {
 #   Initializacion progress messages
 # Returns:
 #   0: initialization ok
-#   >: failed to initialize
+#   >: initialization failed
 #######################################
 function inst64_X_APP_NAME_X_initialize() {
   bl64_dbg_app_show_function
@@ -92,8 +154,10 @@ declare inst64_X_APP_NAME_X_installer_description='Install application: X_APP_FU
 bl64_msg_all_enable_verbose
 bl64_msg_show_batch_start "$inst64_X_APP_NAME_X_installer_description"
 
-[[ -n "$INST64_DEBUG" ]] && bl64_dbg_lib_enable
+[[ -n "$INST64_DEBUG" ]] && bl64_dbg_all_enable
 inst64_X_APP_NAME_X_initialize &&
-  inst64_X_APP_NAME_X_install
+  inst64_X_APP_NAME_X_prepare &&
+  inst64_X_APP_NAME_X_install &&
+  inst64_X_APP_NAME_X_verify
 # X_CODE_PLACEHOLDER_5_X
 bl64_msg_show_batch_finish $? "$inst64_X_APP_NAME_X_installer_description"
