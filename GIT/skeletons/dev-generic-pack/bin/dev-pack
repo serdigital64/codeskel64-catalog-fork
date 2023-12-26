@@ -3,7 +3,7 @@
 # Pack application for delivery
 #
 # * Use to create a distributable package of the application
-# * Template: 2.0.1
+# * Template: 2.1.0
 #
 
 #
@@ -14,6 +14,15 @@
 source ./bin/dev-set || exit 1
 # shellcheck source=lib/bl64/bashlib64.bash
 source "${DEV_CICD_BASHLIB64}/bashlib64.bash" || exit 1
+
+#
+# Functions
+#
+
+function dev_pack_create() {
+  bl64_dbg_app_show_function
+  # X_CODE_PLACEHOLDER_2_X
+}
 
 #
 # Main
@@ -29,5 +38,5 @@ bl64_check_export 'DEV_PACK_FULL_PATH' ||
 bl64_msg_all_enable_verbose
 bl64_msg_show_batch_start 'pack-app'
 bl64_msg_show_task "create distributable package (${DEV_PACK_FULL_PATH})"
-# X_CODE_PLACEHOLDER_2_X
+dev_pack_create
 bl64_msg_show_batch_finish $? 'pack-app'
